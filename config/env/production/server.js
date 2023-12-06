@@ -1,10 +1,7 @@
 module.exports = ({ env }) => ({
-  url: env("MY_HEROKU_URL"),
+  url: env("STRAPI_URL"),
   proxy: true,
   app: {
-    keys: env.array("APP_KEYS", [
-      "DATABASE_URL",
-      "HEROKU_POSTGRESQL_MAROON_URL",
-    ]),
+    keys: env.array("APP_KEYS", ["DATABASE_URL"]),
   },
 });

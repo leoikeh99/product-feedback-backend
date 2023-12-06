@@ -17,7 +17,7 @@ services:
       - key: NODE_ENV
         value: production
       - key: DATABASE_FILENAME
-        value: .tmp/data.db
+        value: /data/strapi.db
       - key: JWT_SECRET
         generateValue: true
       - key: ADMIN_JWT_SECRET
