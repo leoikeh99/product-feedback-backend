@@ -16,8 +16,8 @@ services:
         value: ~16.13.0
       - key: NODE_ENV
         value: production
-      - key: DATABASE_HOST
-        value: db.qhklgyhacprmshvnhrbu.supabase.co
+      - key: DATABASE_FILENAME
+        value: /data/strapi.db
       - key: JWT_SECRET
         generateValue: true
       - key: ADMIN_JWT_SECRET
