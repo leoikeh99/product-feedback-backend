@@ -8,18 +8,16 @@ services:
     healthCheckPath: /_health
     autoDeploy: false
     disk:
-      name: strapi-uploads
-      mountPath: /opt/render/project/src/public/uploads
+      name: strapi-data
+      mountPath: /data
       sizeGB: 0.5
     envVars:
       - key: NODE_VERSION
         value: ~16.13.0
       - key: NODE_ENV
         value: production
-      - key: DATABASE_URL
-        fromDatabase:
-          name: db.qhklgyhacprmshvnhrbu.supabase.co
-          property: host
+      - key: DATABASE_HOST
+        value: db.qhklgyhacprmshvnhrbu.supabase.co
       - key: JWT_SECRET
         generateValue: true
       - key: ADMIN_JWT_SECRET
